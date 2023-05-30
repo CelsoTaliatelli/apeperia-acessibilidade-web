@@ -27,7 +27,11 @@
 }
 
 .contatoCampo-checkbox {
-  display: none;
+  /*display: none;
+  visibility: hidden;*//*evitar usar quando for necessário para leitores de tela* https://webaim.org/techniques/css/invisiblecontent/*/
+  left: -9999x;
+  position: absolute;
+  opacity: 0;
 }
 
 .contatoCampo-icone {
