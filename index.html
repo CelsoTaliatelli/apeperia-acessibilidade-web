@@ -249,7 +249,7 @@
             </article>
           </li>
 
-          <li id="new2" class="listaDeArtigos-item"  data-noticia="2">
+          <li id="new2" class="listaDeArtigos-item" data-noticia="2">
             <article class="listaDeArtigos-artigo">
               <img src="img/dicas-acessibilidade.jpg" class="listaDeArtigos-artigo-img"
                 alt="Pessoas levantando um senhor para ver melhor o show">
@@ -321,83 +321,83 @@
         </div>
       </section> <!--fim .secaoDestaques-->
 
-      <section class="secaoContato" inert="true">
+      <section class="secaoContato">
         <div class="container">
           <h2 class="tituloPadrao">
             CONTATO
           </h2>
 
           <form class="secaoContato-form">
+            <fieldset>
+              <legend class="secaoContato-form-legend">
+                Oi, tudo bem? Fale com a gente!
+                Preencha seus dados e sua mensagem:
+              </legend>
 
-            <p class="secaoContato-form-legend">
-              Oi, tudo bem? Fale com a gente!
-              Preencha seus dados e sua mensagem:
-            </p>
+              <div class="contatoCampo contatoCampo--sucesso">
+                <label for="nome">Nome: </label>
+                <input type="text" class="contatoCampo--validouFoi" value="" required placeholder="Nome..." id="nome">
+              </div>
 
-            <div class="contatoCampo contatoCampo--sucesso">
-              <label for="nome">Nome: </label>
-              <input type="text" class="contatoCampo--validouFoi" value="" required placeholder="Nome..." id="nome">
-            </div>
+              <div class="contatoCampo contatoCampo--erro">
+                <label form="email">Email: </label>
+                <input type="email" class="contatoCampo--validouErro" required placeholder="email" id="email">
+                <span class="contatoCampo-msg contatoCampo-msg--erro">
+                  Você quis dizer <a href="#">gmail.com?</a>
+                </span>
+              </div>
 
-            <div class="contatoCampo contatoCampo--erro">
-              <label form="email">Email: </label>
-              <input type="email" class="contatoCampo--validouErro" required placeholder="email" id="email">
-              <span class="contatoCampo-msg contatoCampo-msg--erro">
-                Você quis dizer <a href="#">gmail.com?</a>
-              </span>
-            </div>
+              <div class="contatoCampo contatoCampo--erro">
+                <label for="telefone">Telefone: </label>
+                <input type="text" class="contatoCampo--validouErro" placeholder="(11) 5571-2751" id="telefone">
+                <span class="contatoCampo-msg contatoCampo-msg--erro">Faltou o DDD</span>
+              </div>
 
-            <div class="contatoCampo contatoCampo--erro">
-              <label for="telefone">Telefone: </label>
-              <input type="text" class="contatoCampo--validouErro" placeholder="(11) 5571-2751" id="telefone">
-              <span class="contatoCampo-msg contatoCampo-msg--erro">Faltou o DDD</span>
-            </div>
+              <div class="contatoCampo">
+                <label for="cep">CEP: </label>
+                <input type="text" maxlength="8" placeholder="cep" required id="cep">
+              </div>
 
-            <div class="contatoCampo">
-              <label for="cep">CEP: </label>
-              <input type="text" maxlength="8" placeholder="cep" required id="cep">
-            </div>
+              <div class="contatoCampo">
+                <label for="endereco">Endereço: </label>
+                <input type="text" class="contatoCampo-campoDesabilitado" readonly value="Rua Vergueiro"
+                  id="endereco"><!--didabled não é pelo pelo leitor de telas para acessibilidade melhor uso é o readonly que da foco no campo -->
+              </div>
 
-            <div class="contatoCampo">
-              <label for="endereco">Endereço: </label>
-              <input type="text" class="contatoCampo-campoDesabilitado" readonly value="Rua Vergueiro"
-                id="endereco"><!--didabled não é pelo pelo leitor de telas para acessibilidade melhor uso é o readonly que da foco no campo -->
-            </div>
+              <div class="contatoCampo">
+                <label for="bairro">Bairro: </label>
+                <input type="text" class="contatoCampo-campoDesabilitado" readonly value="Vila Mariana" id="bairro">
+              </div>
 
-            <div class="contatoCampo">
-              <label for="bairro">Bairro: </label>
-              <input type="text" class="contatoCampo-campoDesabilitado" readonly value="Vila Mariana" id="bairro">
-            </div>
+              <div class="contatoCampo">
+                <label for="cidade">Cidade: </label>
+                <input type="text" class="contatoCampo-campoDesabilitado" readonly value="São Paulo" id="cidade">
+              </div>
 
-            <div class="contatoCampo">
-              <label>Cidade: </label>
-              <input type="text" class="contatoCampo-campoDesabilitado" readonly value="São Paulo">
-            </div>
+              <div class="contatoCampo">
+                <label for="estado">Estado: </label>
+                <input type="text" class="contatoCampo-campoDesabilitado" readonly value="SP" id="estado">
+              </div>
 
-            <div class="contatoCampo">
-              <label for="estado">Estado: </label>
-              <input type="text" class="contatoCampo-campoDesabilitado" readonly value="SP" id="estado">
-            </div>
+              <div class="contatoCampo">
+                <label for="mensagem">Mensagem: </label>
+                <textarea name="" cols="30" rows="10" required id="mensagem"></textarea>
+              </div>
 
-            <div class="contatoCampo">
-              <label for="mensagem">Mensagem: </label>
-              <textarea name="" cols="30" rows="10" required id="mensagem"></textarea>
-            </div>
+              <div class="contatoCampo">
+                <input type="checkbox" checked value="receberDestaques" class="contatoCampo-checkbox" id="receberEmail">
+                <label class="contatoCampo-label" for="receberEmail">Receber destaques por email</label>
+              </div>
 
-            <div class="contatoCampo">
-              <input type="checkbox" checked value="receberDestaques" class="contatoCampo-checkbox">
-              <label class="contatoCampo-label">Receber destaques por email</label>
-            </div>
-
-            <div class="contatoCampo">
-              <button class="secaoContato-form-cta btnPadrao" type="submit">
-                Enviar mensagem
-              </button>
-              <span class="contatoCampo-msg contatoCampo-msg--erro secaoContatoForm-validacao">
-                Verifique os erros acima
-              </span>
-            </div>
-
+              <div class="contatoCampo">
+                <button class="secaoContato-form-cta btnPadrao" type="submit">
+                  Enviar mensagem
+                </button>
+                <span class="contatoCampo-msg contatoCampo-msg--erro secaoContatoForm-validacao">
+                  Verifique os erros acima
+                </span>
+              </div>
+            </fieldset>
           </form>
         </div> <!--fim .container da .secaoContato-->
 
@@ -494,6 +494,7 @@
   <script src="js/carousel.js"></script>
   <script src="js/inert.js"></script>
   <script src="js/dialog.js"></script>
+  <script src="js/validacao-cep.js"></script>
 </body>
 
 </html>
